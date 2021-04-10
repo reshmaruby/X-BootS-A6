@@ -1,0 +1,34 @@
+main{
+    
+    section{
+        background-color: rgb(255, 244, 240);
+        font-family: 'Lucida Sans';
+        color: rgb(45, 80, 179);
+    }
+
+    p{
+        @include font-color(blue);
+        @include font-size(15px);
+        text-align: center;
+        padding: 10px;
+        background-color: rgb(249, 205, 255);
+    }
+    a{
+        .btn-info {
+            display: block;
+    
+            @include responsive(lg) {
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+              @include responsive(md) {
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+              @include responsive(sm) {
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@mixin font-color($color) {
+    -webkit-color: $color;
+    -moz-color: $color;
+    -ms-color: $color;
+    color: $color;
+}
+
+@mixin font-size($size) {
+    -webkit-font-size: $size;
+    -moz-font-size: $size;
+    -ms-font-size: $size;
+    font-size: $size;
+}
+
+@mixin font-weight($weight) {
+    -webkit-font-weight: $weight;
+    -moz-font-weight: $weight;
+    -ms-font-weight: $weight;
+    font-weight: $weight;
+}
+
+@mixin responsive($size) { 
+
+	@if $size == xs {
+
+		@media (max-width: 576px) {
+	    	@content;
+	  	}
+	}
+
+	@else if $size == sm {
+		@media (min-width: 576px) and (max-width: 768px) {
+	    	@content;
+	  	}
+	}
+
+	@else if $size == md {
+		@media (min-width: 768px) and (max-width: 992px) {
+	    	@content;
+	  	}
+	}
+
+	@else if $size == lg {
+		@media (min-width: 992px) and (max-width: 1200px) {
+	    	@content;
+	  	}
+	}
+
+	@else if $size == xl {
+		@media (min-width: 1200px) {
+	    	@content;
+	  	}
+	}
+}
